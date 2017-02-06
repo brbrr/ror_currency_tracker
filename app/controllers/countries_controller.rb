@@ -29,7 +29,7 @@ class CountriesController < ApplicationController
   # POST /countries
   # POST /countries.xml
   def create
-    @country = Country.new(params[:country].permit(:visited,:name,:code))
+    @country = Country.new(params[:country].permit(:visited, :name, :code))
 
     respond_to do |format|
       if @country.save

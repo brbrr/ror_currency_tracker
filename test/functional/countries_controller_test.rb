@@ -16,7 +16,7 @@ class CountriesControllerTest < ActionController::TestCase
 
   test "should create country" do
     assert_difference('Country.count') do
-      post :create, :country => @country.attributes.merge({ :code => Time.now.to_s })
+      post :create, params: { country: @country.attributes.merge("code" => Time.now.to_s) }
     end
 
     assert_redirected_to country_path(assigns(:country))
