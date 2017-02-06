@@ -19,7 +19,8 @@ class CountriesControllerTest < ActionController::TestCase
       post :create, params: { country: @country.attributes.merge("code" => Time.now.to_s) }
     end
 
-    assert_redirected_to country_path(assigns(:country))
+    assert_response :created
+    assert_serializer CountrySerializer
   end
 
   test "should not create duplicate currency" do
@@ -35,13 +36,10 @@ class CountriesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, :id => @country.to_param
-    assert_response :success
-  end
-
   test "should update country" do
     put :update, :id => @country.to_param, :country => @country.attributes
-    assert_redirected_to country_path(assigns(:country))
+    assert_response 200
+
+    assert_serializer CountrySerializer
   end
 end
