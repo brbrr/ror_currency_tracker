@@ -13,3 +13,11 @@ two:
   country: two
   weight: 3.2
   collector_value: 5.1
+
+visited:
+  name: NameVisited
+  code: CodeVisited
+  country: visited
+  weight: 5.2
+  collector_value: 2.1
+

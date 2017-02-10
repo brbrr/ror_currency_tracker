@@ -6,6 +6,7 @@ gem 'rails', '~> 5.0'
 gem 'sqlite3'
 gem 'jquery-rails'
 gem 'active_model_serializers'
+gem 'rack-cors'
 
 
 group :development do

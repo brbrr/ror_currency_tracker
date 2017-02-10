@@ -7,3 +7,8 @@ one:
 two:
   name: Two
   code: Two
+
+visited:
+  name: Visited
+  code: visited
+  visited: true
